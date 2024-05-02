@@ -4,8 +4,8 @@
 - Po skasowaniu wpisu w ProjectCreation zostają skasowane wpisy o tych samych nazwach ProjectName z ProjectReport i TestReport jeśli istnieją.
 
 ### Pliki odpowiadające za działanie:
-- ..api\project-creation\content-types\project-creation\lifecycles.js
-- ..api\project-report\content-types\project-report\lifecycles.js
+- .api\project-creation\content-types\project-creation\lifecycles.js
+- .api\project-report\content-types\project-report\lifecycles.js
 
 # 🚀 Getting started with Strapi
 
