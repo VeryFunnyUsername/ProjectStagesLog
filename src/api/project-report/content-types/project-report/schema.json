@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_reports",
+  "info": {
+    "singularName": "project-report",
+    "pluralName": "project-reports",
+    "displayName": "ProjectReport",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "ProjectName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProjectNumber": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "JobDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "ForQualityCheck": {
+      "type": "boolean",
+      "default": false
+    },
+    "parts_databases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::parts-database.parts-database",
+      "inversedBy": "project_reports"
+    }
+  }
+}

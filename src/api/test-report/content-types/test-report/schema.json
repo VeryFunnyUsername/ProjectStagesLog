@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_reports",
+  "info": {
+    "singularName": "test-report",
+    "pluralName": "test-reports",
+    "displayName": "TestReport",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjectName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProjectNumber": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "Notes": {
+      "type": "richtext",
+      "required": true
+    },
+    "TestPassed": {
+      "type": "boolean"
+    },
+    "Photos": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

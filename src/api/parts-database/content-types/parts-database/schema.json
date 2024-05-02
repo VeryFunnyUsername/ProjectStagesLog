@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parts_databases",
+  "info": {
+    "singularName": "parts-database",
+    "pluralName": "parts-databases",
+    "displayName": "PartsDatabase"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "PartName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "project_reports": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-report.project-report",
+      "mappedBy": "parts_databases"
+    }
+  }
+}

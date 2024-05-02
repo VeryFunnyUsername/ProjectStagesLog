@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_creations",
+  "info": {
+    "singularName": "project-creation",
+    "pluralName": "project-creations",
+    "displayName": "ProjectCreation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "ProjectName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProjectNumber": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "persons_database": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::persons-database.persons-database",
+      "inversedBy": "project_creations"
+    },
+    "material_databases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::material-database.material-database",
+      "inversedBy": "project_creations"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "persons_databases",
+  "info": {
+    "singularName": "persons-database",
+    "pluralName": "persons-databases",
+    "displayName": "PersonsDatabase"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "project_creations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-creation.project-creation",
+      "mappedBy": "persons_database"
+    }
+  }
+}

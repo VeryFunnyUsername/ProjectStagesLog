@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "material_databases",
+  "info": {
+    "singularName": "material-database",
+    "pluralName": "material-databases",
+    "displayName": "MaterialDatabase",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "MaterialName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Price": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "decimal",
+      "required": true
+    },
+    "project_creations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-creation.project-creation",
+      "mappedBy": "material_databases"
+    }
+  }
+}
