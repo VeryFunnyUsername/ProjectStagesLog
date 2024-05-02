@@ -1,6 +1,6 @@
 # Informacje
-Po stworzeniu wpisu w ProjectCreation, automatycznie tworzy się wpis w ProjectReport
-Po ustawieniu pola ForQualityCheck (bool) na True tworzy się wpis w TestReport
+- Po stworzeniu wpisu w ProjectCreation, automatycznie tworzy się wpis w ProjectReport
+- Po ustawieniu pola ForQualityCheck (bool) na True tworzy się wpis w TestReport
 Po skasowaniu wpisu w ProjectCreation zostają skasowane wpisy o tych samych nazwach ProjectName z ProjectReport i TestReport jeśli istnieją.
 
 ### Pliki odpowiadające za działanie:
